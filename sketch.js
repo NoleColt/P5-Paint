@@ -15,15 +15,15 @@ function draw() {
   // Draw color control boxes at the bottom
   stroke(255); // Set stroke color to white
   fill(255, 0, 0);
-  rect(0, height - 30, 30, 30);
+  rect(20, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 128, 0);
-  rect(40, height - 30, 30, 30);
+  rect(60, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 0, 255);
-  rect(80, height - 30, 30, 30);
+  rect(100, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(255);
-  rect(120, height - 30, 30, 30);
+  rect(140, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0);
-  rect(160, height - 30, 30, 30);
+  rect(180, height - 30, 30, 30); // Moved 20 pixels to the right
   noStroke(); // Reset stroke
 
   if (increaseSize) {
@@ -37,8 +37,11 @@ function draw() {
   }
 
   if (mouseIsPressed) {
-    fill(brushColor); // Set the brush color
-    ellipse(mouseX, mouseY, brushSizeX, brushSizeY);
+    // Check if the mouse is within the color control boxes
+    if (mouseY < height - 30) {
+      fill(brushColor); // Set the brush color
+      ellipse(mouseX, mouseY, brushSizeX, brushSizeY);
+    }
   }
 }
 
@@ -61,15 +64,15 @@ function keyReleased() {
 function mousePressed() {
   // Check if the mouse is within any color control box
   if (mouseY > height - 30) {
-    if (mouseX < 30) {
+    if (mouseX < 50) {
       brushColor = color(255, 0, 0); // Red
-    } else if (mouseX < 70) {
+    } else if (mouseX < 90) {
       brushColor = color(0, 128, 0); // Green
-    } else if (mouseX < 110) {
+    } else if (mouseX < 130) {
       brushColor = color(0, 0, 255); // Blue
-    } else if (mouseX < 150) {
+    } else if (mouseX < 170) {
       brushColor = color(255); // White
-    } else if (mouseX < 190) {
+    } else if (mouseX < 210) {
       brushColor = color(0); // Black
     }
   }
