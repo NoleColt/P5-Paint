@@ -15,15 +15,15 @@ function draw() {
   // Draw color control boxes at the bottom
   stroke(255); // Set stroke color to white
   fill(255, 0, 0);
-  rect(20, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(5, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 128, 0);
-  rect(60, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(45, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 0, 255);
-  rect(100, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(85, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(255);
-  rect(140, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(125, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0);
-  rect(180, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(165, height - 30, 30, 30); // Moved 20 pixels to the right
   noStroke(); // Reset stroke
 
   if (increaseSize) {
