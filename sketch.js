@@ -16,8 +16,8 @@ function draw() {
       fill(255, 0, 0);
     } else if (key == 'g') {
       fill(0, 128, 0);
-    } else if (key == 'l') {
-      fill(0, 255, 0);
+    } else if (key == 'b') {
+      fill(0, 0, 255);
     } // Add other color cases here...
   }
 
