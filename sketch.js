@@ -18,6 +18,10 @@ function draw() {
       fill(0, 128, 0);
     } else if (key == 'b') {
       fill(0, 0, 255);
+    } else if (key == 'w') {
+        fill(255, 255, 255);
+    } else if (key == 'e') {
+        fill(0, 0, 0);
     } // Add other color cases here...
   }
 
