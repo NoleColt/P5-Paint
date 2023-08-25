@@ -13,6 +13,7 @@ function draw() {
   noStroke();
 
   // Draw color control boxes at the bottom
+  stroke(255); // Set stroke color to white
   fill(255, 0, 0);
   rect(0, height - 30, 30, 30);
   fill(0, 128, 0);
@@ -22,8 +23,7 @@ function draw() {
   fill(255);
   rect(120, height - 30, 30, 30);
   fill(0);
-  stroke(255); // Set stroke color to white
-  rect(160, height - 30, 30, 30); // Black box with white stroke
+  rect(160, height - 30, 30, 30);
   noStroke(); // Reset stroke
 
   if (increaseSize) {
