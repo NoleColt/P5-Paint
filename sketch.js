@@ -4,26 +4,34 @@ let increaseSize = false;
 let decreaseSize = false;
 let brushColor = 0; // Default color is black (0, 0, 0)
 
+let customColorPicker; // Input for custom color
+
 function setup() {
   createCanvas(1920, 1080);
   background(0);
+
+  // Create the custom color picker input
+  customColorPicker = createInput('#FFFFFF'); // Initial color is white
+  customColorPicker.position(220, height - 25);
+  customColorPicker.size(60);
+  customColorPicker.input(updateCustomColor);
 }
 
 function draw() {
   noStroke();
 
   // Draw color control boxes at the bottom
-  stroke(255); // Set stroke color to white
   fill(255, 0, 0);
-  rect(5, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(20, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 128, 0);
-  rect(45, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(60, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0, 0, 255);
-  rect(85, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(100, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(255);
-  rect(125, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(140, height - 30, 30, 30); // Moved 20 pixels to the right
   fill(0);
-  rect(165, height - 30, 30, 30); // Moved 20 pixels to the right
+  stroke(255); // Set stroke color to white
+  rect(180, height - 30, 30, 30); // Moved 20 pixels to the right
   noStroke(); // Reset stroke
 
   if (increaseSize) {
@@ -76,4 +84,8 @@ function mousePressed() {
       brushColor = color(0); // Black
     }
   }
+}
+
+function updateCustomColor() {
+  brushColor = color(customColorPicker.value()); // Set custom color
 }
