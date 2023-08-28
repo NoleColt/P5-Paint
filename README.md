@@ -18,5 +18,5 @@ Improved Color Selector - **Unlikely**
 # Non-Feature
 Tabs - Self explanotory, just draw what you want to draw first,
 Saving - You can just screenshot and I'm not exactly experienced enough to figure this out,
-Imagine loading - Obvious reasons,
+Image loading - Obvious reasons,
 Zooming - Clunky concept
