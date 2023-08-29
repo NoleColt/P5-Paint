@@ -12,7 +12,7 @@ function setup() {
 
   // Create the custom color picker input
   customColorPicker = createInput('#FFFFFF'); // Initial color is white
-  customColorPicker.position(220, height - 25);
+  customColorPicker.position(225, height - 35);
   customColorPicker.size(60);
   customColorPicker.input(updateCustomColor);
 }
@@ -22,16 +22,16 @@ function draw() {
 
   // Draw color control boxes at the bottom
   fill(255, 0, 0);
-  rect(20, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(10, height - 40, 30, 30); // Moved 20 pixels to the right
   fill(0, 128, 0);
-  rect(60, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(50, height - 40, 30, 30); // Moved 20 pixels to the right
   fill(0, 0, 255);
-  rect(100, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(90, height - 40, 30, 30); // Moved 20 pixels to the right
   fill(255);
-  rect(140, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(130, height - 40, 30, 30); // Moved 20 pixels to the right
   fill(0);
   stroke(255); // Set stroke color to white
-  rect(180, height - 30, 30, 30); // Moved 20 pixels to the right
+  rect(170, height - 40, 30, 30); // Moved 20 pixels to the right
   noStroke(); // Reset stroke
 
   if (increaseSize) {
