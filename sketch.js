@@ -61,7 +61,7 @@ function draw() {
 
   if (mouseIsPressed) {
     // Check if the mouse is within the color control boxes
-    if (mouseY < height - 30) {
+    if (mouseY < height - 40) {
       fill(brushColor); // Set the brush color
       ellipse(mouseX, mouseY, brushSizeX, brushSizeY);
     }
