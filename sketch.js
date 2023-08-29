@@ -94,18 +94,18 @@ function keyReleased() {
 
 function mousePressed() {
   // Check if the mouse is within any color control box
-  if (mouseY > height - 30) {
+  if (mouseY > height - 40) {
     if (mouseX < 50) {
       brushColor = color(255, 0, 0); // Red
     } else if (mouseX < 90) {
       brushColor = color(0, 128, 0); // Green
     } else if (mouseX < 130) {
+      brushColor = color(0, 0, 255); // Blue
+    } else if (mouseX < 170) {
       brushColor = color(255); // White
     } else if (mouseX < 210) {
       brushColor = color(0); // Black
     }
-      brushColor = color(0, 0, 255); // Blue
-    } else if (mouseX < 170) {
   }
 
   // Check if the mouse is within the background toggle square
