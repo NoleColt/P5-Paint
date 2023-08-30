@@ -5,6 +5,7 @@ let decreaseSize = false;
 let brushColor = 0; // Default color is black (0, 0, 0)
 let backgroundColor = 0; // Default background is black (0)
 let backgroundToggled = false; // Flag to track if background has been toggled
+let isEllipseBrush = true; // Flag to track the brush shape (ellipse or square)
 
 let customColorPicker; // Input for custom color
 
@@ -17,6 +18,16 @@ function setup() {
   customColorPicker.position(225, height - 35);
   customColorPicker.size(60);
   customColorPicker.input(updateCustomColor);
+
+  // Create button to switch to ellipse brush
+  let ellipseButton = createButton("Ellipse");
+  ellipseButton.position(width - 120, height - 30);
+  ellipseButton.mousePressed(setEllipseBrush);
+
+  // Create button to switch to square brush
+  let squareButton = createButton("Square");
+  squareButton.position(width - 60, height - 30);
+  squareButton.mousePressed(setSquareBrush);
 }
 
 function draw() {
@@ -63,7 +74,13 @@ function draw() {
     // Check if the mouse is within the color control boxes
     if (mouseY < height - 40) {
       fill(brushColor); // Set the brush color
-      ellipse(mouseX, mouseY, brushSizeX, brushSizeY);
+
+      // Draw the appropriate shape based on the brush shape flag
+      if (isEllipseBrush) {
+        ellipse(mouseX, mouseY, brushSizeX, brushSizeY);
+      } else {
+        rect(mouseX - brushSizeX / 2, mouseY - brushSizeY / 2, brushSizeX, brushSizeY);
+      }
     }
 
     // Check if the mouse is within the background toggle square
@@ -122,4 +139,12 @@ function updateCustomColor() {
 function toggleBackground() {
   backgroundColor = (backgroundColor === 0) ? 255 : 0; // Toggle between black and white
   background(backgroundColor); // Apply the new background color
+}
+
+function setEllipseBrush() {
+  isEllipseBrush = true;
+}
+
+function setSquareBrush() {
+  isEllipseBrush = false;
 }

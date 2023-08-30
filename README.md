@@ -8,11 +8,11 @@ Colors are changed via the boxes in the bottom left screen. You can resize your 
 Preset Colors (RGB WB),
 Hex Color Selector,
 Background Color Selector,
-Resize (- +)
+Resize (- +),
+Brush shape selector
 
 # Future Features
 On-Screen buttons for everything - **Likely**,
-Brush shape selector - **Possible**,
 Improved Color Selector - **Unlikely**
 
 # Non-Feature
