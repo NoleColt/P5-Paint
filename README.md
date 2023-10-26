@@ -14,6 +14,7 @@ Colors are changed via the boxes in the bottom left screen. You can resize your 
 ### Future Features
 - On-Screen buttons for everything - **Likely**,
 - Improved Color Selector - **Unlikely**
+- Instructions Button - **Maybe**
 
 ### Non-Feature
 - Tabs - Self explanotory, just draw what you want to draw first,
